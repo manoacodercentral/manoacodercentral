@@ -1,0 +1,27 @@
+<template name="Edit_Profile_Page">
+  <div class="ui container">
+    <form class="ui form">
+
+      <div class="field">
+        <label>Name</label>
+        <div class="fields">
+          <div class="field">
+            <input type="text" placeholder="First Name">
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Last Name">
+          </div>
+        </div>
+      </div>
+
+      <!-- Later, this needs to disable profile options below when in the off position -->
+      <div class="ui toggle checkbox">
+        <input type="checkbox">
+        <label>Show as coder</label>
+      </div>
+
+      {{> Select_Form_Control label="Programming Languages" options=planguages errorMessage=(fieldError "planguages") multiple=true }}
+
+    </form>
+  </div>
+</template>

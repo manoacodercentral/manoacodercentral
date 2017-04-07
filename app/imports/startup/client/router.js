@@ -29,6 +29,13 @@ FlowRouter.route('/stuff/:_id', {
   },
 });
 
+FlowRouter.route('/edit-profile/:user', {
+  name: 'Edit_Profile_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Profile_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
