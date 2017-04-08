@@ -22,6 +22,17 @@
 
       {{> Select_Form_Control label="Programming Languages" options=planguages errorMessage=(fieldError "planguages") multiple=true }}
 
+      {{> Select_Form_Control label="Hours avaiable for project work per week" options=times errorMessage=(fieldError "times") multiple=false }}
+
+      <!--
+      Probably would want to use a slider instead of dropdown.
+      <div class="field">
+        <input type="range" value="168">
+      </div>
+      -->
+
+      <button class="ui button" type="submit">Update</button>
+
     </form>
   </div>
 </template>
