@@ -1,5 +1,5 @@
 <template name="Edit_Profile_Page">
-  <div class="ui container">
+  <div class="ui container segment">
     <form class="ui form">
 
       <div class="field">
@@ -15,9 +15,18 @@
       </div>
 
       <!-- Later, this needs to disable profile options below when in the off position -->
-      <div class="ui toggle checkbox">
-        <input type="checkbox">
-        <label>Show as coder</label>
+      <div class="field">
+          <input type="checkbox">
+          <label>Show as coder</label>
+        </div>
+      </div>
+
+      <!-- Will allow the coder portion of the profile to show while indicating that the user cannot accept requests at this time. -->
+
+      <div class="field">
+          <input type="checkbox">
+          <label>Show as busy</label>
+        </div>
       </div>
 
       {{> Select_Form_Control label="Programming Languages" options=planguages errorMessage=(fieldError "planguages") multiple=true }}
