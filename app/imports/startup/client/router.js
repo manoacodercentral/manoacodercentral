@@ -15,10 +15,10 @@ FlowRouter.route('/list', {
   },
 });
 
-FlowRouter.route('/add', {
-  name: 'Add_Stuff_Page',
+FlowRouter.route('/add-request', {
+  name: 'Add_Request',
   action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Stuff_Page' });
+    BlazeLayout.render('App_Body', { main: 'Add_Request' });
   },
 });
 
@@ -28,6 +28,9 @@ FlowRouter.route('/stuff/:_id', {
     BlazeLayout.render('App_Body', { main: 'Edit_Stuff_Page' });
   },
 });
+
+
+
 
 FlowRouter.notFound = {
   action() {

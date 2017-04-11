@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<template name="Add_Request">
+  <div style="padding-top: 80px" class="ui text container">
+    <form class="ui form">
+      <h3 class="ui dividing header">Create New Request</h3>
+      <div class="field">
+        <div class="inline fields">
+          <label for="projectType">Type of Project:</label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="projectType" checked="" tabindex="0" class="hidden">
+              <label>Website</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="projectType" tabindex="0" class="hidden">
+              <label>Script</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="projectType" tabindex="0" class="hidden">
+              <label>Desktop Application/Program</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="projectType" tabindex="0" class="hidden">
+              <label>Short Code Snippet</label>
+            </div>
+          </div>
+        </div>
+        <label>Short Description of Project (Problem to be solved, etc.)</label>
+        <textarea rows="3"></textarea>
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" name="last-name" placeholder="Last Name">
+      </div>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+  </div>
+</template>
