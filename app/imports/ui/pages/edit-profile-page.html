@@ -1,0 +1,56 @@
+<template name="Edit_Profile_Page">
+  <div class="ui container segment">
+    <form class="ui form">
+
+      <div class="field">
+        <label>Name</label>
+        <div class="fields">
+          <div class="field">
+            <input type="text" placeholder="First Name">
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Last Name">
+          </div>
+        </div>
+      </div>
+
+      <!-- Later, this needs to disable profile options below when in the off position -->
+      <div class="field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox">
+          <label>Show as coder</label>
+        </div>
+      </div>
+
+      <!-- Will allow the coder portion of the profile to show while indicating that the user cannot accept requests at this time. -->
+
+      <div class="field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox">
+          <label>Show as busy</label>
+        </div>
+      </div>
+
+      {{> Select_Form_Control label="Programming Languages" options=planguages errorMessage=(fieldError "planguages") multiple=true }}
+
+      {{> Select_Form_Control label="Operating Systems" options=osystems errorMessage=(fieldError "osystems") multiple=true }}
+
+      {{> Select_Form_Control label="Hours avaiable for project work per week" options=times errorMessage=(fieldError "times") multiple=false }}
+
+      <div class="field">
+        <label><i class="ui github icon"></i>GitHub</label>
+        <input type="text" placeholder="username">
+      </div>
+
+      <!--
+      Probably would want to use a slider instead of dropdown.
+      <div class="field">
+        <input type="range" value="168">
+      </div>
+      -->
+
+      <button class="ui button" type="submit">Update</button>
+
+    </form>
+  </div>
+</template>
