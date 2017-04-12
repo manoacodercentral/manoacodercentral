@@ -11,3 +11,6 @@ import './list-stuff-page.js';
 
 import './edit-profile-page.html';
 import './edit-profile-page.js';
+
+import './profile-pool-page.html';
+import './profile-pool-page.js';

@@ -36,6 +36,13 @@ FlowRouter.route('/edit-profile/:user', {
   },
 });
 
+FlowRouter.route('/profile-pool', {
+  name: 'Profile_Pool_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Profile_Pool_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
