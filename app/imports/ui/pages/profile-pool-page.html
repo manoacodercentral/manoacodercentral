@@ -1,5 +1,32 @@
 <template name="Profile_Pool_Page">
   <div class="ui container">
+
+    <form class="ui form segment">
+
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox">
+          <label>Include busy coders</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox">
+          <label>Show only coders with GitHub account available</label>
+        </div>
+      </div>
+
+      {{> Select_Form_Control label="Programming Languages" options=planguages errorMessage=(fieldError "planguages") multiple=true }}
+
+      {{> Select_Form_Control label="Operating Systems" options=osystems errorMessage=(fieldError "osystems") multiple=true }}
+
+      {{> Select_Form_Control label="Minimum hours avaiable for project work per week" options=times errorMessage=(fieldError "times") multiple=false }}
+
+      <button class="ui button" type="submit">Filter</button>
+
+    </form>
+
     <div class="ui centered cards">
 
       <div class="card">
