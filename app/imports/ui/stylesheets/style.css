@@ -5,7 +5,7 @@ body {
 #landingPageContent{
   background-image: url('/images/LandingPage.jpg');
   background-size:cover;
-  height: 2000px;
+  height: 750px;
 }
 
 #landingPageSubcontent{
