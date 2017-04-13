@@ -14,3 +14,6 @@ import './edit-profile-page.js';
 
 import './profile-pool-page.html';
 import './profile-pool-page.js';
+
+import './add-request.html';
+import '/.add-request.js';
