@@ -17,4 +17,4 @@ node_modules/
 npm-debug.log
 
 # Ignore .eslintrc
-app/.eslintrc
+# app/.eslintrc
