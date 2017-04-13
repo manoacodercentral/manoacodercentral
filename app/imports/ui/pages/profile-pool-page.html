@@ -1,0 +1,65 @@
+<template name="Profile_Pool_Page">
+  <div class="ui container">
+
+    <form class="ui form segment">
+
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox">
+          <label>Include busy coders</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox">
+          <label>Show only coders with GitHub account available</label>
+        </div>
+      </div>
+
+      {{> Select_Form_Control label="Programming Languages" options=planguages errorMessage=(fieldError "planguages") multiple=true }}
+
+      {{> Select_Form_Control label="Operating Systems" options=osystems errorMessage=(fieldError "osystems") multiple=true }}
+
+      {{> Select_Form_Control label="Minimum hours avaiable for project work per week" options=times errorMessage=(fieldError "times") multiple=false }}
+
+      <button class="ui button" type="submit">Filter</button>
+
+    </form>
+
+    <div class="ui centered cards">
+
+      <div class="card">
+        <div class="content">
+          <div class="header">
+            Cassandra Largosa
+          </div>
+
+          <div class="description">
+            Able to work 4-6 hours a week on projects.
+          </div>
+
+          <div style="margin-top: 10px" class="ui blue tag labels">
+            <a class="ui label">C</a>
+            <a class="ui label">Java</a>
+            <a class="ui label">JavaScript</a>
+          </div>
+
+          <div class="ui teal tag labels">
+            <a class="ui label">Mac OS X</a>
+            <a class="ui label">Windows</a>
+          </div>
+
+        </div>
+        <div class="extra content">
+          <a href="https://github.com/cassandra-largosa"><i class="large black github icon"></i></a>
+          <!-- This should route to a page of the profile owner's projects completed on this app -->
+          <a class="right floated" href="#">
+            Projects 2
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>
