@@ -1,3 +1,23 @@
 body {
   padding-top: 61px;  /* Move body of page below navbar. */
 }
+
+#landingPageContent{
+  background-image: url('/images/LandingPage.jpg');
+  background-size:cover;
+  height: 750px;
+}
+
+#landingPageSubcontent{
+  opacity: .75;
+  filter: alpha(opacity=75); /* For IE8 and earlier */
+  background-color: grey;
+
+}
+
+#landingPageSubcontent:hover{
+  opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+  background-color: darkgrey;
+
+}
