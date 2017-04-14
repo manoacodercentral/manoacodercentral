@@ -18,3 +18,4 @@ npm-debug.log
 
 # Ignore .eslintrc
 # app/.eslintrc
+config/settings.json
