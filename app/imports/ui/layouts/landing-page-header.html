@@ -1,22 +1,20 @@
 <template name="LandingPageHeader">
-    <div class="ui top fixed borderless inverted menu">
-  <div class="ui container">
-    <a class="item" href="{{pathFor 'Home_Page'}}"><h1>ManoaCoderCentral</h1></a>
+  <div class="ui top fixed borderless inverted menu">
+    <div class="ui container">
+      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>ManoaCoderCentral</h1></a>
 
-  SHORTCUT STUFF. Used to quickly link to other pages during development
-    <a class="item" href="{{pathFor 'Home_Page'}}"><h3>homepage</h3></a>
+      SHORTCUT STUFF. Used to quickly link to other pages during development
+      <a class="item" href="{{pathFor 'Home_Page'}}"><h3>homepage</h3></a>
 
-    <a class="item" href="{{pathFor 'Add_Request'}}"><h3>add request</h3></a>
+      <a class="item" href="{{pathFor 'Add_Request'}}"><h3>add request</h3></a>
 
-    <a class="item" href="{{pathFor 'Edit_Profile_Page'}}"><h3>edit profile page</h3></a>
+      <a class="item" href="{{pathFor 'Edit_Profile_Page'}}"><h3>edit profile page</h3></a>
 
-    <a class="item" href="{{pathFor 'Profile_Pool_Page'}}"><h3>profile pool</h3></a>
+      <a class="item" href="{{pathFor 'Profile_Pool_Page'}}"><h3>profile pool</h3></a>
+
+      {{> Cas_Login }}
 
 
-      {{#if currentUser}}
-        <a class="item" href="{{pathFor 'Home_Page'}}">Go to Home page</a>
-      {{/if}}
-      <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
     </div>
   </div>
 </template>

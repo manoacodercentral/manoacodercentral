@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+
+
+{{#if currentUser}}
+{{/if}}
+<a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
+
+
+{{#if currentUser}}
+<a class="item" href="{{pathFor 'Home_Page'}}">Go to Home page</a>
+<div class="item cas-logout">Logout</div>
+{{else}}
+<div class="item cas-login">Login</div>
+<a class="item" href="{{pathFor '#'}}"><h3>create account</h3></a>
+{{/if}}
+
+
+
+
+
+
+
+</body>
+</html>
