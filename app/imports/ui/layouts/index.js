@@ -7,3 +7,9 @@ import './header.js';
 import './if-logged-in.html';
 import './if-logged-in.js';
 import './loading.html';
+
+import './landing-page.html';
+import './landing-page.js';
+import './landing-page-header.html';
+import './landing-page-header';
+import './landing-page-footer.html';
