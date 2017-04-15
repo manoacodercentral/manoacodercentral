@@ -50,6 +50,20 @@ FlowRouter.route('/profile-pool', {
   },
 });
 
+FlowRouter.route('/request-pool', {
+  name: 'Request_Pool_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Request_Pool_Page' });
+  },
+});
+
+FlowRouter.route('/request-details', {
+  name: 'Request_Details_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Request_Details_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });

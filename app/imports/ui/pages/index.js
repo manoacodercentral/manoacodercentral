@@ -20,3 +20,9 @@ import './profile-pool-page.js';
 
 import './add-request.html';
 import './add-request.js';
+
+import './request-pool-page.html';
+import './request-pool-page.js';
+
+import './request-details.html';
+import './request_details-page';
