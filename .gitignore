@@ -15,6 +15,7 @@ node_modules/
 
 # Ignore the debug log generated when, for example, ESLint fails.
 npm-debug.log
+config/settings.json
 
 # Ignore .eslintrc
 # app/.eslintrc
