@@ -1,16 +1,20 @@
 import { Template } from 'meteor/templating';
 import { _ } from 'meteor/underscore';
-import { languageList, osList, timeList } from './edit-profile-page';
+import { OS } from '../../api/os/os.js';
+import { languageList, timeList } from './edit-profile-page';
 
 Template.Profile_Pool_Page.helpers({
+  osystems() {
+    return _.map(OS.find().fetch(),
+        function makeOSObject(os) {
+          return {
+            label: os.name,
+          };
+        });
+  },
   planguages() {
     return _.map(languageList, function makeInstrumentObject(planguage) {
       return { label: planguage };
-    });
-  },
-  osystems() {
-    return _.map(osList, function makeInstrumentObject(os) {
-      return { label: os };
     });
   },
   times() {
