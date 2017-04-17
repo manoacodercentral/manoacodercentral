@@ -66,14 +66,7 @@
         <input type="text" name="offer" placeholder="$10.00">
       </div>
       <div class="field">
-        <label>Operating System Support</label>
-        <select class="ui fluid search dropdown" name="os">
-          <option value="">Operating System</option>
-          <option value="1">Windows</option>
-          <option value="2">macOS</option>
-          <option value="3">UNIX or UNIX-like (non-macOS)</option>
-          <option value="4">Cross-Platform or Other (specify in description)</option>
-        </select>
+        {{> Select_Form_Control label="Operating Systems" options=osystems multiple=true }}
       </div>
       <div class="field">
         <label>Licensing Type</label>
