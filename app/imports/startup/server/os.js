@@ -1,4 +1,4 @@
-import { OS } from '../../api/os/os.js';
+import { OS } from '../../api/os/OSCollection.js';
 import { _ } from 'meteor/underscore';
 
 /**

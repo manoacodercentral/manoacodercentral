@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 import { _ } from 'meteor/underscore';
-import { OS } from '../../api/os/os.js';
+import { OS } from '../../api/os/OSCollection.js';
 import { languageList, timeList } from './edit-profile-page';
 
 Template.Profile_Pool_Page.helpers({

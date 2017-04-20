@@ -2,7 +2,7 @@
 
 import { Template } from 'meteor/templating';
 import { _ } from 'meteor/underscore';
-import { OS } from '../../api/os/os.js';
+import { OS } from '../../api/os/OSCollection.js';
 
 export const languageList = ['C', 'C++', 'Java', 'JavaScript', 'Python'];
 export const timeList = ['Less than an hour', '1-3', '4-6', '7-9',
