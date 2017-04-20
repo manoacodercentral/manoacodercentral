@@ -19,6 +19,6 @@ const osSeeds = [
  */
 if (OS.find().count() === 0) {
   _.each(osSeeds, function seedStuffs(os) {
-    OS.insert(os);
+    OS.define(os);
   });
 }
