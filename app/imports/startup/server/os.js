@@ -1,4 +1,4 @@
-import { OS } from '../../api/os/os.js';
+import { OS } from '../../api/os/OSCollection.js';
 import { _ } from 'meteor/underscore';
 
 /**
@@ -19,6 +19,6 @@ const osSeeds = [
  */
 if (OS.find().count() === 0) {
   _.each(osSeeds, function seedStuffs(os) {
-    OS.insert(os);
+    OS.define(os);
   });
 }

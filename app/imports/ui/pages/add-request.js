@@ -4,7 +4,7 @@
 
 import { Template } from 'meteor/templating';
 import { _ } from 'meteor/underscore';
-import { OS } from '../../api/os/os.js';
+import { OS } from '../../api/os/OSCollection.js';
 
 $('.ui.radio.checkbox')
     .checkbox()
@@ -12,7 +12,7 @@ $('.ui.radio.checkbox')
 
 Template.Add_Request.helpers({
   osystems() {
-    return _.map(OS.find().fetch(),
+    return _.map(OS.findAll(),
         function makeOSObject(os) {
           return {
             label: os.name,
