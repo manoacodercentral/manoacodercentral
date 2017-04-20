@@ -12,7 +12,7 @@ $('.ui.radio.checkbox')
 
 Template.Add_Request.helpers({
   osystems() {
-    return _.map(OS.find().fetch(),
+    return _.map(OS.findAll(),
         function makeOSObject(os) {
           return {
             label: os.name,

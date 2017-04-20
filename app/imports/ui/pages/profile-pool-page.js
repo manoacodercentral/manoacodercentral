@@ -5,7 +5,7 @@ import { languageList, timeList } from './edit-profile-page';
 
 Template.Profile_Pool_Page.helpers({
   osystems() {
-    return _.map(OS.find().fetch(),
+    return _.map(OS.findAll(),
         function makeOSObject(os) {
           return {
             label: os.name,

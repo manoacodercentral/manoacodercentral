@@ -15,7 +15,7 @@ Template.Edit_Profile_Page.helpers({
     });
   },
   osystems() {
-    return _.map(OS.find().fetch(),
+    return _.map(OS.findAll(),
         function makeOSObject(os) {
           return {
             label: os.name,
