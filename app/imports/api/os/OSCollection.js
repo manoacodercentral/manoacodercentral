@@ -34,7 +34,7 @@ class OSCollection extends BaseCollection {
 
   /**
    * Returns the OS name corresponding to the passed interest docID.
-   * @param osID An interest docID.
+   * @param osID An OS docID.
    * @returns { String } An OS name.
    * @throws { Meteor.Error} If the OS docID cannot be found.
    */
