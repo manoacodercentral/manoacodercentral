@@ -1,1 +1,1 @@
-import './os.js';
+import './OSCollection.js';
