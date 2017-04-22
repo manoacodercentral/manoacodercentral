@@ -1,32 +1,41 @@
 <template name="Home_Page">
-  <div class="ui icon message">
-    <i class="notched circle loading icon"></i>
-    <div class="content">
-      <div class="header">
-        Just one second
-      </div>
-      <p>This code is pretty usefull for both inbox loading and suggest projects loading</p>
-    </div>
-  </div>
 
 
   <div class="ui container">
 
-    <div class="ui styled fluid accordion">
-    <div class="active title">
-      <i class="dropdown icon"></i>
-      Unread Messages
-    </div>
-    <div class="active content">
-      <p>Heres the div that'll show unread messages</p>
-      <p>Maybe there will be a button here to link to a page dedicated for messages</p>
-    </div>
-      <div class="title">
+    <div id="homepageAccordion"  class="ui styled fluid accordion">
+      <div style="padding-bottom: 30px" class="active title">
+        <i class="dropdown icon"></i>
+        Unread Messages
+
+        <a class="ui teal circular label">2</a>
+          <a class="ui right floated button {{ isActiveRoute 'Messages'}} item" href="{{ pathFor 'messages' }}" >View Messages</a>
+
+      </div>
+      <div class="active content">
+
+        <div class="ui icon message">
+          <i class="notched circle loading icon"></i>
+          <div class="content">
+            <div class="header">
+              Just one second
+            </div>
+            <p>Messages are loading</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="padding-bottom: 30px" class="title">
         <i class="dropdown icon"></i>
         View Active projects
+
+
+        <a class="ui right floated button {{ isActiveRoute 'Edit-Profile-Page:user'}} item" href="{{ pathFor 'edit-profile/:user' }}" >View Profile</a>
       </div>
       <div class="content">
-        <p>Lists current projects coder is working on(will only be visible if active profile have active projects associated with it</p>
+        <p>Lists current projects coder is working on(will only be visible if active profile have active projects
+          associated with it</p>
         <div class="ui card">
           <div class="content">
             <div class="header">example 1</div>
@@ -48,113 +57,26 @@
           </div>
         </div>
       </div>
-    <div class="title">
-      <i class="dropdown icon"></i>
-      Suggested Projects
-    </div>
-    <div class="content">
-      <p>A list of suggested projects that are pulled from the pool. Can be used with information listed in the coders profile (languages known)</p>
 
-      <div class="ui card">
-        <div class="content">
-          <div class="header">example 1</div>
-          <div class="meta">
-            <span>2 days ago</span>
-            <a>afdfdafdsafas</a>
-          </div>
-          <p></p>
-        </div>
+      <div style="padding-bottom: 30px" class="title">
+        <i class="dropdown icon"></i>
+        View Request pool
+
+        <a class="ui right floated button {{ isActiveRoute 'Request-Pool-Page'}} item" href="{{ pathFor 'request-pool' }}" >Go to Request Pool</a>
       </div>
+      <div class="content">
+        <p>Views some of the most recently added requests. will link to view request pool page</p>
+        <div class="right aligned">Button that will link to actual page</div>
 
-
-      <div class="ui card">
-        <div class="content">
-          <div class="header">Example 2</div>
-          <div class="meta">
-            <span>2 days ago</span>
-            <a>adsfafd</a>
-          </div>
-          <p></p>
-        </div>
-      </div>
-
-      <div class="ui card">
-        <div class="content">
-          <div class="header">example 3</div>
-          <div class="meta">
-            <span>2 days ago</span>
-            <a>1324</a>
-          </div>
-          <p></p>
-        </div>
 
         <div class="ui card">
           <div class="content">
-            <div class="header">example 3</div>
+            <div class="header">example 1</div>
             <div class="meta">
               <span>2 days ago</span>
-              <a>1324</a>
+              <a>afdfdafdsafas</a>
             </div>
             <p></p>
-          </div>
-        </div>
-
-
-
-
-
-      </div>
-
-
-
-
-
-    </div>
-    <div class="title">
-      <i class="dropdown icon"></i>
-      View Request pool
-    </div>
-    <div class="content">
-          <p>Views some of the most recently added requests. will link to view request pool page</p>
-          <div class="right aligned">Button that will link to actual page</div>
-
-
-
-
-      <div class="ui card">
-        <div class="content">
-          <div class="header">example 1</div>
-          <div class="meta">
-            <span>2 days ago</span>
-            <a>afdfdafdsafas</a>
-          </div>
-          <p></p>
-        </div>
-
-        <div class="ui card">
-          <div class="content">
-            <div class="header">example 3</div>
-            <div class="meta">
-              <span>2 days ago</span>
-              <a>1324</a>
-            </div>
-            <p></p>
-          </div>
-        </div>
-
-
-      </div>
-
-
-          <div class="ui card">
-            <div class="content">
-              <div class="header">Example 2</div>
-              <div class="meta">
-                <span>2 days ago</span>
-                <a>adsfafd</a>
-              </div>
-              <p></p>
-            </div>
           </div>
 
           <div class="ui card">
@@ -169,9 +91,151 @@
           </div>
 
 
-    </div>
+        </div>
 
-  </div>
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header">Example 2</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>adsfafd</a>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header">example 3</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>1324</a>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div style="padding-bottom: 30px" class="title">
+        <i class="dropdown icon"></i>
+        View Profile pool (View Coders)
+
+        <a class="ui right floated button {{ isActiveRoute 'Profile-Pool-Page'}} item" href="{{ pathFor 'profile-pool' }}" >Go to Profile Pool</a>
+      </div>
+      <div class="content">
+        <p>Featured profiles perhaps? random selection of coders?</p>
+        <div class="ui card">
+          <div class="content">
+            <div class="header">example 1</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>afdfdafdsafas</a>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="ui card">
+            <div class="content">
+              <div class="header">example 3</div>
+              <div class="meta">
+                <span>2 days ago</span>
+                <a>1324</a>
+              </div>
+              <p></p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header">Example 2</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>adsfafd</a>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header">example 3</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>1324</a>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div style="padding-bottom: 30px" class="title">
+        <i class="dropdown icon"></i>
+        Suggested Projects
+      </div>
+      <div class="content">
+        <p>A list of suggested projects that are pulled from the pool. Can be used with information listed in the coders
+          profile (languages known)</p>
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header">example 1</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>afdfdafdsafas</a>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header">Example 2</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>adsfafd</a>
+            </div>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="ui card">
+          <div class="content">
+            <div class="header">example 3</div>
+            <div class="meta">
+              <span>2 days ago</span>
+              <a>1324</a>
+            </div>
+            <p></p>
+          </div>
+
+          <div class="ui card">
+            <div class="content">
+              <div class="header">example 3</div>
+              <div class="meta">
+                <span>2 days ago</span>
+                <a>1324</a>
+              </div>
+              <p></p>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -182,7 +246,7 @@
     ;
 
     $('.message .close')
-        .on('click', function() {
+        .on('click', function () {
           $(this)
               .closest('.message')
               .transition('fade')
