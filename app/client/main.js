@@ -10,3 +10,5 @@ import '/imports/api/base';
 import '/imports/api/profile';
 import '/imports/api/interest';
 import '/imports/api/programming-language';
+import '/imports/ui/components/user';
+import '/imports/ui/layouts/shared';
