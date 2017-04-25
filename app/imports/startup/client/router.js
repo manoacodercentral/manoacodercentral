@@ -1,10 +1,37 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { $ } from 'meteor/jquery';
 
+/*                        LANDING ROUTE                       */
+export const landingPageRouteName = 'Landing_Page';
 FlowRouter.route('/', {
-  name: 'Landing_Page',
+  name: landingPageRouteName,
   action() {
-    BlazeLayout.render('Landing_Page_Layout', { main: 'Landing_Page' });
+    BlazeLayout.render('Landing_Page_Layout', { main: landingPageRouteName });
+  },
+});
+
+
+/*                        USER ROUTES                      */
+function addUserBodyClass() {
+  $('body').addClass('user-layout-body');
+}
+
+function removeUserBodyClass() {
+  $('body').removeClass('user-layout-body');
+}
+const userRoutes = FlowRouter.group({
+  prefix: '/:username',
+  name: 'userRoutes',
+  triggersEnter: [addUserBodyClass],
+  triggersExit: [removeUserBodyClass],
+});
+
+export const profilePageRouteName = 'Edit_Profile_Page';
+userRoutes.route('/profile', {
+  name: profilePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: profilePageRouteName });
   },
 });
 
@@ -36,7 +63,7 @@ FlowRouter.route('/stuff/:_id', {
   },
 });
 
-FlowRouter.route('/edit-profile/:user', {
+FlowRouter.route('/edit-profile', {
   name: 'Edit_Profile_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Profile_Page' });

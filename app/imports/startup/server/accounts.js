@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { _ } from 'meteor/underscore';
+import { Profiles } from '/imports/api/profile/ProfileCollection';
 
 /* eslint-disable no-console */
 
@@ -17,17 +18,16 @@ if (Meteor.users.find().count() === 0) {
 }
 
 
-
-
 /* Validate username, sending a specific error message on failure. */
 Accounts.validateNewUser(function (user) {
   if (user) {
     const username = user.services.cas.id;
-    if (username && _.contains(Meteor.settings.allowed_users, username)) {
-      return true;
+    if (!Profiles.isDefined(username)) {
+      Profiles.define({ username });
     }
   }
-  throw new Meteor.Error(403, 'User not in the allowed list');
+  // All UH users are valid for BowFolios.
+  return true;
 });
 
 
