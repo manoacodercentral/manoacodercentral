@@ -1,7 +1,3 @@
-/**
- * Created by jake on 4/11/17.
- */
-
 import { Template } from 'meteor/templating';
 import { _ } from 'meteor/underscore';
 import { OS } from '../../api/os/OSCollection.js';
