@@ -3,7 +3,7 @@ body {
 }
 
 #landingPageContent{
-  background-image: url('/images/LandingPage.jpg');
+  background-image: url('images/LandingPage.jpg');
   background-size:cover;
   height: 750px;
 }
@@ -27,7 +27,6 @@ body {
 }
 
 #footerQuickLinks{
-  padding-top: 15px;
   padding: 15px;
   color:darkgreen;
 

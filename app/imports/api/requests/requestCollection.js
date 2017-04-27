@@ -1,7 +1,3 @@
-/**
- * Created by Jake Denton-Kubo on 4/24/2017.
- */
-
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { check } from 'meteor/check';
