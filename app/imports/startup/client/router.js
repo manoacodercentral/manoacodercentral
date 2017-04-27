@@ -35,10 +35,11 @@ userRoutes.route('/profile', {
   },
 });
 
-FlowRouter.route('/home_page', {
-  name: 'Home_Page',
+export const homePageName = 'Home_Page';
+userRoutes.route('/homepage', {
+  name: homePageName,
   action() {
-    BlazeLayout.render('App_Body', { main: 'Home_Page' });
+    BlazeLayout.render('User_Layout', { main: homePageName });
   },
 });
 

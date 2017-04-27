@@ -12,6 +12,3 @@ import './landing-page.html';
 import './landing-page.js';
 import './landing-page-header.html';
 import './landing-page-footer.html';
-
-import './cas-login.html';
-import './cas-login.js';
