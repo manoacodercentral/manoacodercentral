@@ -22,7 +22,8 @@ body {
 }
 
 #landingPageFooter{
-  padding-top: 15px;
+  padding: 10px 10px 10px 15px;
+  background-color: #F5F5FD;
 }
 
 #footerQuickLinks{
