@@ -15,3 +15,5 @@ import './landing-page-footer.html';
 
 import './cas-login.html';
 import './cas-login.js';
+
+import './account-menu.html';

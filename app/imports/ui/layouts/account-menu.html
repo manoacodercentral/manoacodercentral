@@ -1,0 +1,17 @@
+<template name="Account_Menu">
+  <div class="ui simple dropdown item">
+    Account
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      {{#if currentUser}}
+        <a class="item" href="{{pathFor 'Edit_Profile_Page'}}">Edit Profile</a>
+      {{else}}
+
+      {{/if}}
+
+      {{> Cas_Login }}
+
+    </div>
+  </div>
+
+</template>
