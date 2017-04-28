@@ -91,6 +91,14 @@ FlowRouter.route('/request-details', {
   },
 });
 
+/*                        MISC ROUTES                       */
+FlowRouter.route('/terms-of-use', {
+  name: 'Terms_Of_Use_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Terms_Of_Use_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
