@@ -2,6 +2,10 @@ body {
   padding-top: 75px; /* Move body of page below navbar. */
 }
 
+footer {
+  background-color: #F8F8F9;
+}
+
 #landingPageContent {
   background-image: url('images/LandingPage.jpg');
   background-size: cover;
