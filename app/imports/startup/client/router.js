@@ -7,7 +7,7 @@ export const landingPageRouteName = 'Landing_Page';
 FlowRouter.route('/', {
   name: landingPageRouteName,
   action() {
-    BlazeLayout.render('Landing_Page_Layout', { main: landingPageRouteName });
+    BlazeLayout.render('Landing_Layout', { main: landingPageRouteName });
   },
 });
 
@@ -35,17 +35,11 @@ userRoutes.route('/profile', {
   },
 });
 
-FlowRouter.route('/home_page', {
-  name: 'Home_Page',
+export const homepageLayoutName = 'Home_Page';
+userRoutes.route('/homepage', {
+  name: homepageLayoutName,
   action() {
-    BlazeLayout.render('App_Body', { main: 'Home_Page' });
-  },
-});
-
-FlowRouter.route('/list', {
-  name: 'List_Stuff_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'List_Stuff_Page' });
+    BlazeLayout.render('User_Layout', { main: homepageLayoutName });
   },
 });
 
@@ -53,13 +47,6 @@ FlowRouter.route('/add-request', {
   name: 'Add_Request',
   action() {
     BlazeLayout.render('App_Body', { main: 'Add_Request' });
-  },
-});
-
-FlowRouter.route('/stuff/:_id', {
-  name: 'Edit_Stuff_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Edit_Stuff_Page' });
   },
 });
 
@@ -93,6 +80,6 @@ FlowRouter.route('/request-details', {
 
 FlowRouter.notFound = {
   action() {
-    BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
+    BlazeLayout.render('Page_Not_Found', { main: 'App_Not_Found' });
   },
 };
