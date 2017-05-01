@@ -26,3 +26,5 @@ import './request-pool-page.js';
 
 import './request-details.html';
 import './request_details-page';
+
+import './terms-of-use-page.html';

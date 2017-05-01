@@ -78,6 +78,13 @@ FlowRouter.route('/request-details', {
   },
 });
 
+FlowRouter.route('/terms-of-use', {
+  name: 'Terms_Of_Use_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Terms_Of_Use_Page' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('Page_Not_Found', { main: 'App_Not_Found' });

@@ -1,18 +1,15 @@
 <template name="User_Footer">
   <footer>
-    <hr>
+
+    {{#if currentUser}}
     <div class="ui grid container">
       <div class="eight wide column">
         <div id="footerQuickLinks" class="ui left aligned container">
 
           <h3>Quick links</h3>
-          <a class="item" href="#'}}">Github</a><br/>
+          <a class="item" href="{{pathFor 'Terms_Of_Use_Page'}}">Terms of Use</a><br/>
+          <a class="item" href="#">GitHub</a><br/>
 
-          <a class="item" href="#'}}">other stuff</a><br/>
-
-          <a class="item" href="#'}}">more stuff</a><br/>
-
-          <a class="item" href="#">stuffstuff</a><br/>
         </div>
       </div>
 
@@ -29,5 +26,19 @@
       </div>
 
     </div>
+    {{else}}
+
+    <div id="landingPageFooter" class="ui bottom fixed borderless menu">
+      <p>By creating an account you agree to the <a style="padding-left: 1px" href="{{pathFor 'Terms_Of_Use_Page'}}">Terms of Use</a>.
+      </p>
+    </div>
+
+    {{/if}}
+
+
+
+
+
+
   </footer>
 </template>
