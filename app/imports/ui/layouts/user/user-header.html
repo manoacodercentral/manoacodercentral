@@ -1,19 +1,25 @@
 <template name="User_Header">
   <div class="ui top fixed borderless inverted stackable darkblue menu">
-  <div class="ui container">
-    <a class="item" href="{{pathFor 'Home_Page'}}"><h1>ManoaCoderCentral</h1></a>
+    <div class="ui container">
 
+
+      {{#if currentUser}}
+      <a class="{{isActiveRoute 'Home_Page'}} item" href="{{pathFor 'Home_Page' username=routeUserName}}"><h1>ManoaCoderCentral</h1></a>
       <div class="right menu">
-        {{#if currentUser}}
-        <a class="item" href="{{pathFor 'Add_Request'}}">
-          <i class="plus icon"></i> Add Request
-        </a>
-        {{> Account_Menu }}
+          <a class="{{isActiveRoute 'Add_Request'}} item" href="{{pathFor 'Add_Request' username=routeUserName}}"><i class="plus icon"></i> Add Request</a>
+
+        <div class="item">
+          {{> Account_Menu }}
+        </div>
+      </div>
 
         {{else}}
+        <a href="#"><h1>ManoaCoderCentral</h1></a>
+        <div class="right menu">
         {{> Cas_Login }}
-        {{/if}}
       </div>
+        {{/if}}
+
     </div>
   </div>
 </template>
