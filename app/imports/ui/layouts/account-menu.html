@@ -4,7 +4,7 @@
     <i class="dropdown icon"></i>
     <div class="menu">
       {{#if currentUser}}
-        <a class="item" href="{{pathFor 'Edit_Profile_Page'}}">Edit Profile</a>
+        <a class="{{isActiveRoute 'Edit_Profile_Page'}} item" href="{{pathFor 'Edit_Profile_Page' username=routeUserName}}">Edit Profile</a>
       {{/if}}
 
       {{> Cas_Login }}
