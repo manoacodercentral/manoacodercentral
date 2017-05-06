@@ -1,5 +1,11 @@
 body {
-  padding-top: 75px; /* Move body of page below navbar. */
+  padding-top: 0px; /* Move body of page below navbar. */
+  background-color: #0b3c61;
+}
+
+content {
+  paddint-bottom: 1350px;
+  height: 1000px;
 }
 
 footer {
@@ -10,13 +16,13 @@ footer {
   background-image: url('images/LandingPage.jpg');
   background-size: cover;
   height: 750px;
+  padding-top: 100px;
 }
 
 #landingPageSubcontent {
   opacity: .75;
   filter: alpha(opacity=75); /* For IE8 and earlier */
   background-color: grey;
-
 }
 
 #landingPageSubcontent:hover {
