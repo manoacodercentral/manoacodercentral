@@ -4,21 +4,25 @@
 
 
       {{#if currentUser}}
-      <a class="{{isActiveRoute 'Home_Page'}} item" href="{{pathFor 'Home_Page' username=routeUserName}}"><h1>ManoaCoderCentral</h1></a>
-      <div class="right menu">
-          <a class="{{isActiveRoute 'Add_Request'}} item" href="{{pathFor 'Add_Request' username=routeUserName}}"><i class="plus icon"></i> Add Request</a>
-
-        <div class="item">
-          {{> Account_Menu }}
-        </div>
-      </div>
-
-        {{else}}
-        <a href="#"><h1>ManoaCoderCentral</h1></a>
+        <a class="{{isActiveRoute 'Home_Page'}} item" href="{{pathFor 'Home_Page' username=routeUserName}}"><h1>
+          ManoaCoderCentral</h1></a>
         <div class="right menu">
-        {{> Cas_Login }}
-      </div>
-        {{/if}}
+          <a class="{{isActiveRoute 'Add_Request'}} item" href="{{pathFor 'Add_Request' username=routeUserName}}"><i
+              class="plus icon"></i> Add Request</a>
+
+          <div class="item">
+            {{> Account_Menu }}
+          </div>
+        </div>
+
+      {{else}}
+        <a class="item"><h1>ManoaCoderCentral</h1></a>
+        <div class="right menu">
+          <a class="item">
+            <div class="ui primary {{size}} button">{{> Cas_Login }}</div>
+          </a>
+        </div>
+      {{/if}}
 
     </div>
   </div>
